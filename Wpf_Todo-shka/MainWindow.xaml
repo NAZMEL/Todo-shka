@@ -5,8 +5,101 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Todo_shka"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="Todo-shka" Height="650" Width="1025" Background="#FFD4E2E2">
+    <Window.Resources>
         
+    </Window.Resources>
+    
+    <Grid Background="#FF3CBBE0">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0"
+                Name="AddEacercise"
+                Width="335"
+                Height="37"
+                HorizontalAlignment="Left"
+                Margin="7,6,135,12"
+                HorizontalContentAlignment="Center"
+                Click="New_Excercise"
+                >
+            <Button.Content>
+                <TextBlock>
+                    <Run FontSize="20" FontStretch="Expanded">Додати нове завдання</Run>
+                    <Run FontSize="20" FontWeight="Bold" Foreground="red">+</Run>
+                </TextBlock>
+            </Button.Content>
+        </Button>
+         
+        <Button Content="Оновити дані" Width="190" Height="40" HorizontalAlignment="Right" Background="#FFE8B3C4" FontSize="21" Margin="0,8,5,8" 
+                Click="Get_Changes" Foreground="#FF070B19" BorderBrush="#FFE85F5F" Grid.Row="0"/>
+
+        <TabControl x:Name="TabExcercises" Grid.Row="1" Margin="5 5 5 50" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.ColumnSpan="2">
+            <TabItem x:Name="Current">
+                <TabItem.Header>
+                    <TextBlock FontSize="15" >Поточні завдання</TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <ScrollViewer x:Name="Scroll">
+                        <StackPanel x:Name="CurrentExcercises">
+                            
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem x:Name="Done">
+                <TabItem.Header>
+                    <TextBlock FontSize="15">Виконані завдання</TextBlock>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <ScrollViewer>
+                    <StackPanel x:Name="DoneExcercises">
+                        <!--<Border CornerRadius="8 8 8 8" BorderBrush="#FF000000" Margin="3 3 3 5" Background="#FF90F3F3">
+                            
+                        </Border>-->
+                    </StackPanel>
+                    </ScrollViewer>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem x:Name="Deleted">
+                <TabItem.Header>
+                    <TextBlock Text="Видалені завдання" FontSize="15" />
+                </TabItem.Header>
+                <TabItem.Content>
+                    <ScrollViewer>
+                        <StackPanel x:Name="DeletedExcercises">
+                        </StackPanel>
+                    </ScrollViewer>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+
+        <Button Grid.Row="1"
+                Name="DeleteChecked"
+                Click="Check_Delete"
+                Content="Видалити позначені"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Width="220" Height="35"
+                Margin="0 0 10 10"
+                FontSize="17"
+                />
+        <Button Grid.Row="1"
+                Click="Check_Done"
+                Content="Завдання виконано"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Width="210" Height="35"
+                Margin="0 0 250 10"
+                FontSize="17"
+                />
+
+
     </Grid>
+
 </Window>

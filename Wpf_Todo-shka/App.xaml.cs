@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using static Wpf_Todo_shka.MainWindow;
 
 namespace Wpf_Todo_shka
 {
@@ -13,5 +8,14 @@ namespace Wpf_Todo_shka
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {        
+            this.Exit += new ExitEventHandler(App_Exit); 
+        }
+
+        void App_Exit(object sender, ExitEventArgs e)
+        {
+            excer.DBClose();
+        }
     }
 }
