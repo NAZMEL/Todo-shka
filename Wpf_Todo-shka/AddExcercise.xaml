@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Todo_shka"
         mc:Ignorable="d"
+        Icon="/Resource/icon.ico"
         Title="AddExcercise" Height="350" Width="600">
-    <Grid Background="#FF3CBBE0">
+    <Grid Background="#FF3CBBE0" FocusManager.FocusedElement="{Binding ElementName=BlockContent}">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="0.13*"/>
@@ -23,6 +24,8 @@
                  FontSize="15"
                  Padding="3"
                  TextWrapping="Wrap"
+                 IsEnabled="True"
+                 
                  />
         <Button Grid.Row="1"
                 Click="Add_Excercise"

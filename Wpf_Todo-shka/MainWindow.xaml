@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Todo_shka"
         mc:Ignorable="d"
-        Title="Todo-shka" Height="650" Width="1025" Background="#FFD4E2E2">
+        Icon="/Resource/icon.ico"
+        Title="Todo-shka" Height="650" Width="1025" Background="#FFD4E2E2"
+        >
     <Window.Resources>
         
     </Window.Resources>
