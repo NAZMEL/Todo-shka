@@ -6,7 +6,7 @@ After install go on C://Program files(x86)/NAZMEL Corporation/Todo-shka and choo
 
 ![folder](https://github.com/NAZMEL/Todo-shka/blob/master/Images/4.png) </br>
 
-Call a context menu and go to tab 'Security' (Безопасность) and click 'Choose' (Изменить) how at screen below </br>
+Call a context menu and go to tab 'Security' (Безопасность) and click 'Choose' (Изменить) how it is on screen below </br>
 
 ![security](https://github.com/NAZMEL/Todo-shka/blob/master/Images/5.1.png)
 
